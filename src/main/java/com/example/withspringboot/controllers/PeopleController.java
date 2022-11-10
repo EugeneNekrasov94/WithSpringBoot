@@ -2,6 +2,7 @@ package com.example.withspringboot.controllers;
 
 import com.example.withspringboot.model.User;
 import com.example.withspringboot.service.UserService;
+import com.example.withspringboot.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +17,8 @@ public class PeopleController {
     private UserService userService;
 
     @Autowired
-    public void setUserService(UserService userService) {
-        this.userService = userService;
+    public void setUserService(UserServiceImpl userServiceImpl) {
+        this.userService = userServiceImpl;
     }
 
     @GetMapping(value = "/")
